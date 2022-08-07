@@ -18,8 +18,8 @@ jobs:
       with:
         go-version: 1.18
 
-  #  - name: Build
-  #    run: go build -v ./...
+    - name: install claat tool
+      run: go install github.com/googlecodelabs/tools/claat@latest
 
-  #  - name: Test
-  #    run: go test -v ./...
+    - name: Test
+      run: claat -h

@@ -20,6 +20,10 @@ jobs:
 
     - name: install claat tool
       run: go install github.com/googlecodelabs/tools/claat@latest
-
+      
+    - name: Change to docs directory
+      run: cd ../docs
+      
+    # Generate html from all md files
     - name: Test
-      run: claat -h
+      run: claat export ../codelabs/*md

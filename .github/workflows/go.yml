@@ -22,8 +22,10 @@ jobs:
       run: go install github.com/googlecodelabs/tools/claat@latest
       
     - name: Change to docs directory
-      run: cd ../docs
+      run: |
+          cd $GITHUB_WORKSPACE/docs
+          echo pwd
       
     # Generate html from all md files
     - name: Test
-      run: claat export ../codelabs/*md
+      run: claat export $GITHUB_WORKSPACE/../codelabs/*md

@@ -25,5 +25,5 @@ jobs:
       run: cd $GITHUB_WORKSPACE/docs
       
     # Generate html from all md files
-    - name: Test
-      run: claat export ../codelabs/*md -f offline
+    # - name: Test
+    #   run: claat export ../codelabs/*md -f offline
